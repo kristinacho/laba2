@@ -1,6 +1,6 @@
 public class Fraction {
-    public int numerator;
-    public int denominator;
+    private int numerator;
+    private int denominator;
 
     public Fraction(int numerator, int denominator) {
         if (denominator == 0) {
