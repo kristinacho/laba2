@@ -1,7 +1,7 @@
 class Name {
-    public String firstName;
-    public String surname;
-    public String patronymic;
+    private String firstName;
+    private String surname;
+    private String patronymic;
 
     // Конструктор для инициализации всех параметров
     public Name(String surname, String firstName, String patronymic) {
