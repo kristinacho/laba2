@@ -1,13 +1,16 @@
 import java.util.ArrayList;
 import java.util.List;
 class City {
-    public String name;
-    public List<Route> routes; // Список маршрутов
+    private String name;
+    private List<Route> routes; // Список маршрутов
 
     // Конструктор для создания города с названием
     public City(String name) {
         this.name = name;
         this.routes = new ArrayList<>();
+    }
+    public void addRoute(City destination, double cost) {
+        routes.add(new Route(destination, cost));
     }
 
     // Новый конструктор для создания города с названием и маршрутами
@@ -18,10 +21,6 @@ class City {
 
     public String getName() {
         return name;
-    }
-
-    public void addRoute(City destination, double cost) {
-        routes.add(new Route(destination, cost));
     }
 
     public String toString() {
