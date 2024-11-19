@@ -1,6 +1,6 @@
 class Person {
     private String name;
-    public int height;
+    private int height;
 
     // Конструктор для инициализации имени и роста
     public Person(String name, int height) {
@@ -16,7 +16,7 @@ class Person {
 
 class Personn {
     private Name name;
-    public int height;
+    int height;
 
     public Personn(Name name, int height) {
         this.name = name;
