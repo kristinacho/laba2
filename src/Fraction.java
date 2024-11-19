@@ -1,6 +1,6 @@
 public class Fraction {
-    public int numerator;   // Числитель
-    public int denominator; // Знаменатель
+    public int numerator;
+    public int denominator;
 
     public Fraction(int numerator, int denominator) {
         if (denominator == 0) {
@@ -29,7 +29,11 @@ public class Fraction {
         return gcd;
     }
 
+    @Override
     public String toString() {
+        if (numerator == 0) {
+            return "0";
+        }
         return numerator + "/" + denominator;
     }
 
