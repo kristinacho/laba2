@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 class City {
-    public String name; // город
+    public String name;
     public List<Route> routes; // Список маршрутов
 
     // Конструктор для создания города с названием
