@@ -3,43 +3,36 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         // Задание 1.2. Человек
         System.out.println("Задание 1.2. Человек");
 
-        // Создание объектов Name
-        Name cleopatraName = new Name();
-        cleopatraName.name = "Клеопатра";
+        Person cleopatraPerson = new Person("Клеопатра", 152);
+        Person pushkinPerson = new Person("Пушкин", 167);
+        Person vladimirPerson = new Person("Владимир", 189);
 
-        Name pushkinName = new Name();
-        pushkinName.surname = "Пушкин";
-        pushkinName.name = "Александр";
-        pushkinName.patronymic = "Сергеевич";
+        System.out.println(cleopatraPerson);
+        System.out.println(pushkinPerson);
+        System.out.println(vladimirPerson);
 
-        Name mayakovskiyName = new Name();
-        mayakovskiyName.surname = "Маяковский";
-        mayakovskiyName.name = "Владимир";
-
-        Person cleopatra = new Person(cleopatraName, 152);
-        Person pushkin = new Person(pushkinName, 167);
-        Person vladimir = new Person(mayakovskiyName, 189);
-
-        // Вывод информации о людях (Задание 1.2)
-        System.out.println("Человек с именем \"" + cleopatra.getName().name + "\" и ростом " + cleopatra.height);
-        System.out.println("Человек с именем \"" + pushkin.getName().name + "\" и ростом " + pushkin.height);
-        System.out.println("Человек с именем \"" + vladimir.getName().name + "\" и ростом " + vladimir.height);
-
-        // Задание 1.3. Имена
         System.out.println("\nЗадание 1.3. Имена");
+
+        Name cleopatraName = new Name("Клеопатра");
+        Name pushkinName = new Name("Пушкин", "Александр", "Сергеевич");
+        Name mayakovskiyName = new Name("Маяковский", "Владимир");
 
         System.out.println(cleopatraName);
         System.out.println(pushkinName);
         System.out.println(mayakovskiyName);
+        //Задание 2.2
+        System.out.println("\nЗадание 2.2. Человек с именем.");
+        Personn cleopatra = new Personn(cleopatraName, 152);
+        Personn pushkin = new Personn(pushkinName, 167);
+        Personn vladimir = new Personn(mayakovskiyName, 189);
 
-        System.out.println("\nЗадание 2.2.Объединенный вывод:");
-
-        System.out.println(cleopatra);
-        System.out.println(pushkin.getName() + ", рост: " + pushkin.height);
-        System.out.println(vladimir.getName() + ", рост: " + vladimir.height);
+        System.out.println("Человек с именем \"" + cleopatra.getName() + "\" и ростом " + cleopatra.height);
+        System.out.println("Человек с именем \"" + pushkin.getName() + "\" и ростом " + pushkin.height);
+        System.out.println("Человек с именем \"" + vladimir.getName()+ "\" и ростом " + vladimir.height);
 
         // Задание 3.3. Города.
         System.out.println("\nЗадание 3.3. Города.");
@@ -93,8 +86,8 @@ public class Main {
 
         System.out.println("\nЗадание 5.5.Дробь.");
         Fraction f1 = new Fraction(2, 6);
-        Fraction f2 = new Fraction(7, 21);
-        Fraction f3 = new Fraction(3, 4);
+        Fraction f2 = new Fraction(-1, 3);
+        Fraction f3 = new Fraction(3, 6);
 
         System.out.println(f1 + " + " + f2 + " = " + f1.sum(f2));
         System.out.println(f1 + " - " + f2 + " = " + f1.minus(f2));
